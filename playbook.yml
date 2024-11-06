@@ -1,0 +1,41 @@
+---
+- name: Testando instalar programa no windows host
+  hosts: windows
+  become: false
+  gather_facts: false
+  tasks:
+
+    - name: Testando conexao ping
+      win_ping:
+         
+    - name: Instalando pacote Chocolatey
+      win_chocolatey:
+        name: chocolatey
+        state: present
+        
+    - name: Instalando aplicativo Winrar
+      win_chocolatey:
+        name: winrar
+        state: present
+        
+    - name: Instalando Visual Studio Code 
+      win_chocolatey:
+        name: vscode
+        state: present
+
+    - name: Instalando Visual Studio Code Install
+      win_chocolatey:
+        name: vscode.install
+        state: present
+        
+    - name: Install VLC
+      win_chocolatey:
+        name: vlc
+        state: present
+        force: true
+
+    - name: Install VLC Install
+      win_chocolatey:
+        name: vlc.install
+        state: present
+        force: true

@@ -1,0 +1,10 @@
+[windows]
+xxxxxxxx
+
+[windows:vars]
+ansible_user=xxxx
+ansible_password=xxxxx
+ansible_port=xxxx
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore

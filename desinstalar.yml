@@ -1,0 +1,31 @@
+---
+- name: Test uninstall program to windows host
+  hosts: windows
+  become: false
+  gather_facts: false
+  tasks:
+    - name: Desinstalando Winrar
+      win_chocolatey:
+        name: winrar
+        state: absent
+
+    - name: Desinstalando Visual Studio Code
+      win_chocolatey:
+        name: vscode
+        state: absent
+
+    - name: Desinstalando Visual Studio Code Installer
+      win_chocolatey:
+        name: vscode.install
+        state: absent
+
+    - name: Desinstalando Vlc Media Player
+      win_chocolatey:
+        name: vlc
+        state: absent
+
+    - name: Desinstalando Visual Studio Code Installer
+      win_chocolatey:
+        name: vlc.install
+        state: absent
+
